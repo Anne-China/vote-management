@@ -1,0 +1,453 @@
+html,body{
+    min-width: 820px;
+    min-height: 600px;
+    width:100%;
+}
+body{
+    font-size: 16px;
+    font-family: MicrosoftYaHei;
+}
+#vote_management{
+    width: 100%;
+    height: 100%;
+    min-width: 820px;
+    min-height: 600px;
+    box-sizing: border-box;
+}
+#vote_management .vote_header{
+    width: 100%;
+    border-bottom: 1px solid #eeeeee;
+}
+#vote_management ol li{
+    list-style: none;
+}
+#vote_management a{
+    text-decoration: none;
+    color: #546576;
+    cursor: pointer;
+    letter-spacing: 1.33px;
+}
+#vote_management .vote_header ol{
+    background: #FFFFFF;
+    padding-bottom: 18px;
+    padding-left: 15px;
+    margin: 0 auto;
+    margin-top: 18px;
+}
+#vote_management .content_title{
+    background-color: #fafafa;
+    height: 49px;
+    position: relative;
+    border-bottom: 1px solid #eeeeee;
+}
+#vote_management .content_title ol{
+    margin: 0 auto;
+    padding-top: 21px;
+    padding-left: 49px;
+}
+#vote_management .content_title ol li{
+    display: inline;
+    padding-top: 21px;
+    line-height: 18px;
+}
+#vote_management .content_title .joined{
+
+}
+#vote_management .content_title .joined,
+#vote_management .content_title .start_man{
+    line-height: 18px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+#vote_management .vote_way .active{
+    border-bottom: 3px solid #555555;
+    padding-bottom: 6px;
+}
+#vote_management .vote_way{
+    display: inline;
+    float: left;
+}
+#vote_management .content_title .title_right{
+    margin-top: 9px;
+    margin-bottom: 9px;
+    margin-right: 12px;
+    float: right;
+    display: inline;
+    border: 1px solid #398439;
+    width: 90px;
+    height: 30px;
+    border-radius: 3px;
+    background-color: #70bf73;
+    line-height: 26px;
+}
+#vote_management .content_title .add_vote{
+    color: #FFFFFF;
+    font-size: 14px;
+    letter-spacing: 2px;
+    padding-left: 4px;
+}
+#vote_management .list_header a{
+    color: black;
+}
+#vote_management .list_header{
+    width: 100%;
+    height: 51px;
+    border-bottom: 1px solid #eeeeee;
+    padding-top: 18px;
+}
+#vote_management .list_header ol li{
+    display: inline;
+}
+#vote_management .list_header .col-sm-2{
+    text-align: right;
+}
+#vote_management .list_header .col-sm-6{
+    text-align: left;
+}
+#vote_management .list_header .vote_name{
+    padding-left: 12px;
+    font-size: 14px;
+    color: #333333;
+    letter-spacing: 0.5px;
+    padding-right: 10px;
+}
+#vote_management .list_header .vote_line{
+    border: 1px solid #b1b1b1;
+    width: 2px;
+    height: 13px;
+    opacity: 0.5;
+}
+#vote_management .list_header .vote_square{
+    height: 20px;
+    width: 20px;
+    border: 1px solid #999999;
+    border-radius: 2px;
+    padding-left: 10px;
+    padding-right: 5px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+#vote_management .radic{
+    padding-left: 0px;
+    padding-right: 0px;
+}
+#vote_management .list_header .see_noname{
+    font-size: 14px;
+    color: #999999;
+    letter-spacing: 0.85px;
+    padding-left: 6px;
+}
+#vote_management .list_header .vote_num{
+    font-size: 14px;
+    color: #333333;
+    letter-spacing: 0.47px;
+}
+#vote_management .list_header .vote_status{
+    font-size: 14px;
+    color: #333333;
+    letter-spacing: 0.47px;
+}
+#vote_management .list_header .vote_operation{
+    font-size: 14px;
+    color: #333333;
+    letter-spacing: 0.47px;
+}
+#vote_management .no_task, #vote_management .no_content img{
+    padding-top: 8%;
+    padding-left: 43%;
+}
+#vote_management #content{
+    padding-left: 32px;
+    padding-top: 17px;
+}
+#vote_management .no_content img{
+    display: block;
+    vertical-align: middle;
+}
+#vote_management .content_title .add_vote{
+    cursor: pointer;
+}
+#vote_management .modal-header{
+    height: 38px;
+    background-color: #f6f6f6;
+    font-size: 14px;
+    color: #546576;
+    letter-spacing: 0;
+    line-height: 14px;
+    padding-top: 10px;
+    padding-left: 25px;
+    padding-bottom: 9px;
+}
+#vote_management .modal-body .title_input{
+    width: 100%;
+    height: 71px;
+    padding-left: 45px;
+    padding-top: 27px;
+    padding-bottom: 27px;
+    border-left-width: 0px;
+    border-top-width: 0px;
+    border-right-width: 0px;
+    margin-top: -15px;
+    outline: none;
+}
+#cost_title_length{
+    color: grey;
+    float: right;
+    position: absolute;
+    width: 130px;
+    right: -9px;
+    top: 50px;
+    font-size: 13px;
+}
+#vote_management .modal_footcontent{
+    margin-top: 36px;
+    border-bottom: 1px solid #E1E1E1;
+    opacity: 0.5;
+}
+#vote_management .close_time{
+    font-size: 12px;
+    color: #666666;
+    letter-spacing: 0.85px;
+    line-height: 12px;
+}
+#vote_management .vote_withoutname{
+    font-family: PingFangSC-Regular;
+    font-size: 12px;
+    color: #666666;
+    letter-spacing: 1px;
+    line-height: 12px;
+}
+#vote_management .modal_downcontent{
+    margin-top: 23px;
+    text-align: center;
+}
+#vote_management .vote_result,
+#vote_management .share,
+#vote_management .comment{
+    font-size: 12px;
+    color: #666666;
+    letter-spacing: 1px;
+    line-height: 12px;
+}
+#vote_management .result_biger,
+#vote_management .share_result,
+#vote_management .comment_result{
+    font-size: 14px;
+    color: #333333;
+    letter-spacing: 1px;
+    line-height: 14px;
+    padding-top: 17px;
+}
+#vote_management .withoutname_smaller{
+    font-family: PingFangSC-Regular;
+    font-size: 10px;
+    color: #CBCBCB;
+    letter-spacing: 0.71px;
+    line-height: 14px;
+}
+#vote_management .vote_close{
+    width: 40%;
+}
+#vote_management .vote_without{
+    width: 56%;
+}
+#vote_management .to_settime{
+    padding-top: 14px;
+    cursor: pointer;
+}
+#vote_management .set_time{
+    width: 130px;
+    height: 23px;
+    border-width: 0px;
+    font-size: 14px;
+    color: #999999;
+    cursor: text;
+    letter-spacing: 1px;
+    line-height: 14px;
+    outline: none;
+    position: relative;
+}
+#vote_management .choose{
+    padding-top: 12px;
+}
+.choose2{
+	list-style: none;
+	padding-top: 3px;
+	padding-left: 40px;
+}
+#vote_management .col-xs-6{
+    padding-bottom: 16px;
+}
+#vote_management .col-xs-4{
+    padding-left: 15px;
+    text-align: left;
+}
+#vote_management .modal-content .modal-footer{
+    height: 52px;
+    text-align: center;
+    margin-bottom: 6px;
+    background: #f6f6f6;
+}
+#vote_management .btn-default,
+#vote_management .btn-primary{
+    width: 90px;
+    height: 30px;
+    border-radius: 4px;
+    padding: 0px;
+}
+#vote_management .btn-primary{
+    background: #70BF73;
+    border: 1px solid #3B9640;
+    color: #FFFFFF;
+}
+#vote_management .btn-default
+{
+    padding-left: 20px;
+    background: #FFFFFF;
+    border: 1px solid #999999;
+    color: #999999;
+    padding: 5px 28px;
+}
+#vote_management .add-on{
+    background-image: url("../src/time.png");
+    height: 25px;
+    width: 25px;
+    display: inline;
+}
+.if_noname{
+    position: absolute;
+    border: 1px solid #999999;
+    width: 90px;
+    height: 53px;
+    z-index: -1;
+    cursor: pointer;
+    padding: 5px;
+}
+.yes_name{
+    padding-bottom: 2px;
+}
+.no_name{
+    padding-bottom: 4px;
+}
+#vote_management .insert ol li{
+    display: inline;
+}
+#vote_management .insert .col-sm-2{
+    text-align: right;
+}
+#vote_management .insert .col-sm-6{
+    text-align: left;
+}
+#vote_management .insert ._operation{
+    padding-right: 38px;
+}
+#vote_management ._operation a{
+    color: red;
+}
+#vote_management ._operation a:hover{
+    text-decoration: underline;
+}
+#vote_management .insert ._status{
+    padding-right: 32px;
+}
+#vote_management .insert ._num{
+    right: 29px;
+}
+#vote_management .a_row{
+    padding-bottom: 33px;
+}
+.a_row .col-sm-2, .a_row .col-sm-6{
+	font-family: .PingFangSC-Regular;
+	font-size: 14px;
+	color: #333333;
+	padding-top: 12px;
+}
+#vote_details{
+	top: -31px;
+	right: -6px;
+	left: auto;
+}
+#vote_details .modal-header{
+	background: #FFFFFF;
+}
+.details_right{
+	display: inline;
+	float: right;
+	cursor: pointer;
+}
+.details_line{
+	height: 20px;
+	width: 1px;
+	background: #E1E1E1;
+	border: 1px solid #E1E1E1;
+	float: right;
+	margin-left: 9px;
+	margin-right: 13px;
+}
+#vote_details .details_votename,
+#vote_details .details_votenum,
+#vote_details .details_voteroot,
+#vote_details .details_votetime{
+	color: #666666;
+	letter-spacing: 1px;
+	padding-right: 20px;
+	padding-bottom: 10px;
+}
+#vote_details .details_votename{
+	padding-top: 16px;
+}
+._votename, ._votetime, ._voteroot, ._votenum{
+	padding-left: 20px;
+}
+#vote_details ._votetime{
+	color: #4990E2;
+	letter-spacing: 1px;
+}
+
+
+
+
+.pagination-sm{
+    display:inline-block;
+    margin:2% 42%;
+    height:34px;
+}
+.pagination-sm > li{
+    display: inline;
+}
+.pagination-sm > li > a, .pagination-sm > li > span {
+    padding: 5px 10px;
+    font-size: 12px;
+    position: relative;
+    float: left;
+    margin-left: -1px;
+    line-height: 1.42857143;
+}
+.pagination-sm li a{
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    margin-right: 5px;
+    background-color: #F5F5F5;
+    color: #333;
+    border: 1px solid #E1E1E1;
+}
+.pagination-sm li a:hover,
+.pagination-sm .active a,
+.pagination-sm .active a:hover,
+.pagination-sm > .active > a:focus
+{
+    background-color: #2EC16C;
+    color: #fff;
+    border-color: #2EC16C;
+}
+.pagination-sm li a.previous{
+    background-image: url("../src/icon－shangyiye%20copy%209.svg");
+}
+.pagination-sm li a.next{
+    background: #cccccc url("../src/icon－xiayiye－hov%20copy%209.svg") no-repeat;
+}
+.pagination-sm li a.last{
+    background-image: url("../src/icon－tiaozhuan%20copy%209.svg");
+}
+

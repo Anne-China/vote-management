@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content=""width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <title>投票管理</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/bootstrap-table.min.css" />
+    <link rel="stylesheet" href="css/bootstrap-datetimepicker.min.css" />
+    <link rel="stylesheet" href="css/vote-css.css" />
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap-table.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap-datetimepicker.js"></script>
+    <script type="text/javascript" src="js/bootstrap-datetimepicker.fr.js"></script>
+    <script type="text/javascript" src="js/bootstrap-datetimepicker.zh-CN.js"></script>
+</head>
+<body>
+<div id="vote_management">
+    <!--导航栏-->
+    <div class="vote_header">
+        <ol class="header_name">
+            <li><a href="#">投票管理</a></li>
+        </ol>
+    </div>
+    <!--主体-->
+    <div class="vote_content">
+        <div class="content_title">
+            <div class="vote_way">
+                <ol>
+                    <li><a class="start_man">我发起的</a></li>
+                    <li><a class="joined" href="#vote_management">我参与的</a></li>
+                </ol>
+            </div>
+            <div class="title_right">
+                <span class="add_vote" data-target="#myModal" data-toggle="modal">＋新建投票</span>
+            </div>
+        </div>
+        <div class="list_header row">
+            <div class="col-sm-6 columns1">
+                <ol>
+                <li><a class="vote_name">投票名称</a></li>
+                <span class="vote_line"></span>
+                <li class="vote_square"></li>
+                <li class="see_noname">仅查看匿名</li>
+                </ol>
+            </div>
+            <div class="col-sm-2 vote_num">投票人数</div>
+            <div class="col-sm-2 vote_status">状态</div>
+            <div class="col-sm-2 vote_operation">操作</div>
+        </div>
+        <div class="no_content" id="no_content">
+            <div id="content" class="row insert"></div>
+            <div class="pagination-sm"></div>
+            <img src="src/image1.png" id="image1">
+            <span class="no_task" id="task_none">暂无正在进行/已完成的投票哦</span>
+        </div>
+    </div>
+    <!--新建投票模态框-->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                        &times;
+                    </button>
+                    <span class="modal-title" id="myModalLabel">新建投票</span>
+                </div>
+                <div class="modal-body">
+                    <div class="modal_text">
+                        <input type="text" class="title_input" id="input_content" maxlength="60" placeholder="请输入投票名称(仅用于投票管理)" onkeyup="javascript:setShowLength(this, 60, 'cost_title_length');" />
+                        <span class="_red" id="cost_title_length">还可以输入60字</span>
+                    </div>
+                    <div class="modal_blank">
+                        <div class="row modal_footcontent">
+                            <div class="col-xs-6 vote_close">
+                                <ol>
+                                    <li class="close_time">截止时间</li>
+                                    <li class="to_settime form_datetime" data-link-field="timeset">
+                                        <img src="src/time.png" class="add-on icon-th">
+                                        <input type="text" placeholder="点击设置" class="set_time" id="timeset" readonly/>
+                                    </li>
+                                </ol>
+                            </div>
+                            <div class="col-xs-6 vote_without">
+                                <ol>
+                                    <li class="vote_withoutname">匿名投票
+                                        <span class="withoutname_smaller">开启后，发布者仍可查看投票人详情</span>
+                                    </li>
+                                    <li class="choose"><p id="_no">否</p></li>
+                                    <li class="if_or_not"></li>
+                                </ol>
+                            </div>
+                        </div>
+                        <div class="row modal_downcontent">
+                            <div class="col-xs-4">
+                                <ol>
+                                    <li class="vote_result">投票结果</li>
+                                    <li class="result_biger">投票后可见</li>
+                                </ol>
+                            </div>
+                            <div class="col-xs-4">
+                                <ol>
+                                    <li class="share">分享权限</li>
+                                    <li class="share_result">不允许</li>
+                                </ol>
+                            </div>
+                            <div class="col-xs-4">
+                                <ol>
+                                    <li class="comment">评论功能</li>
+                                    <li class="comment_result">开启</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" id="primary" data-dismiss="modal"">发布</button>
+                    <button type="button" class="btn btn-default" id="default">取消</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--新建投票模态框结束-->
+    
+    <!--投票详情-->
+    <div class="modal details" id="vote_details" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		 <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                        &times;
+                    </button>
+                    <span class="modal-title" id="myModalLabel">投票详情</span>
+                    <div class="details_right">
+                    	<img src="src/icon－fenxiang－default.svg" class="share_img" />
+                    	<span class="share_results">分享结果</span>
+                    	<span class="details_line"></span>
+                    </div>
+                </div>
+                <div class="modal-body">
+            		<div class="details_first">
+            			<ol>
+            				<li class="details_votename">投票名称<span class="_votename"></span></li>
+            				<li class="details_votetime">有效时间<span class="_votetime"></span></li>
+            				<li class="details_voteroot">投票权限<span class="_voteroot"></span></li>
+            				<li class="details_votenum">投票人数<span class="_votenum">4</span></li>           				
+            			</ol>
+            		</div>
+                </div>
+                <div class="modal-footer">
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="js/vote-js.js"></script>
+</body>
+</html>
